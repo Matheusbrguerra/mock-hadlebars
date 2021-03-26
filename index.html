@@ -1,0 +1,235 @@
+<center>
+  <div style="border:none;background:#eeeeee;padding:.75pt .75pt .75pt .75pt">
+    <p class="MsoNormal" align="center" style="text-align:center">
+      <span style='font-size:9.0pt;font-family:"Arial",sans-serif;color:#444444'>
+        <img border="0" id="m_-4357532493846534739_x0000_i1027"
+          src="https://portalb2b.oi.net.br/theme/img/logo-novo-email.fw.png" />
+      </span>
+    </p>
+  </div>
+  <table style="font-family:arial;font-size:12px;border:1px solid #eeeeee;width:800px;color:#509766;">
+    <tr>
+      <td colspan="2" align="center" bgcolor="#3fbd65" style="text-align:center; color:#FFFFFF">
+        <p style="font-size:30px;">ALÇADA POC</p>
+      </td>
+    </tr>
+    <tr style="background-color:#dddddd">
+      <td colspan="2" style="background-color:#3fbd65; padding:5px; font-size:18px; color:#ffffff; text-align:center">
+        CLIENTE: {{Poc.razaoSocial}}
+      </td>
+    </tr>
+    <tr>
+      <td style="padding:20px !important;font-family:arial;">
+        <!-- produtos -->
+        <table style="width:100%; font-family:arial; font-size:12px">
+          <thead>
+            <tr style="background-color:#3fbd65; color:#FFFFFF">
+              <th align="center" style="padding:4px">Família</th>
+              <th align="center" style="padding:4px">Produto</th>
+              <th align="center" style="padding:4px">Produto N2</th>
+            </tr>
+          </thead>
+          <tbody>
+            {{#each products}}
+            <tr style="background-color:#dddddd">
+              <td align="center">{{this.nome}}</td>
+              <td align="center">{{this.Produto.nome}}</td>
+              <td align="center">{{this.Produto.Familia.nome}}</td>
+            </tr>
+            {{/each}}
+          </tbody>
+        </table>
+        <br />
+        <table style="width:100%; font-family:arial; font-size:12px">
+          <tr style="background-color:#dddddd">
+            <td style="border:1px #cccccc solid; padding:5px; font-size:18px; color:#509766">
+              ID da POC
+            </td>
+            <td style="border:1px #cccccc solid; padding:5px; font-size:18px; color:#509766">
+              ID do Pipeline
+            </td>
+            <td style="border:1px #cccccc solid; padding:5px; font-size:18px; color:#509766">
+              CNPJ
+            </td>
+          </tr>
+          <tr>
+            <td style="border:1px #cccccc solid;">
+              {{Poc.id}}
+            </td>
+            <td style="border:1px #cccccc solid;">
+              {{Poc.PipelineId}}
+            </td>
+            <td style="border:1px #cccccc solid;">
+              {{Poc.cnpj}}
+            </td>
+          </tr>
+          <tr style="background-color:#dddddd">
+            <td style="border:1px #cccccc solid; padding:5px; font-size:18px; color:#509766">
+              Regional
+            </td>
+            <td style="border:1px #cccccc solid; padding:5px; font-size:18px; color:#509766">
+              Estado
+            </td>
+            <td style="border:1px #cccccc solid; padding:5px; font-size:18px; color:#509766">
+              Cidade
+            </td>
+          </tr>
+          <tr>
+            <td style="border:1px #cccccc solid; padding:5px;">
+              {{Poc.regional}}
+            </td>
+            <td style="border:1px #cccccc solid; padding:5px;">
+              {{Poc.estado}}
+            </td>
+            <td style="border:1px #cccccc solid; padding:5px;">
+              {{Poc.cidade}}
+            </td>
+          </tr>
+          <tr style="background-color:#dddddd">
+            <td style="border:1px #cccccc solid; padding:5px; font-size:18px; color:#509766">
+              GP de Entrega Responsável
+            </td>
+            <td style="border:1px #cccccc solid; padding:5px; font-size:18px; color:#509766">
+              Email GP de Entrega
+            </td>
+            <td style="border:1px #cccccc solid; padding:5px; font-size:18px; color:#509766">
+              Celular GP de Entrega
+            </td>
+          </tr>
+          <tr>
+            <td style="border:1px #cccccc solid; padding:5px;">
+              {{Poc.gpEntregaResponsavel}}
+            </td>
+            <td style="border:1px #cccccc solid; padding:5px;">
+              {{Poc.gpEmail}}
+            </td>
+            <td style="border:1px #cccccc solid; padding:5px;">
+              {{Poc.telefone}}
+            </td>
+          </tr>
+          <tr style="background-color:#dddddd">
+            <td style="border:1px #cccccc solid; padding:5px; font-size:18px; color:#509766" colspan="4">
+              Descrição da Poc
+            </td>
+          </tr>
+          <tr>
+            <td style="border:1px #cccccc solid; padding:5px;" colspan="4">
+              {{Poc.descricao}}
+            </td>
+          </tr>
+          <tr style="background-color:#dddddd">
+            <td style="border:1px #cccccc solid; padding:5px; font-size:18px; color:#509766" colspan="2">
+              Parceiro sugerido
+            </td>
+            <td colspan="2" style="border:1px #cccccc solid; padding:5px; font-size:18px; color:#509766">
+              Justificativa do parceiro escolhido
+            </td>
+          </tr>
+          <tr>
+            <td style="border:1px #cccccc solid; padding:5px;" colspan="2">
+              {{Poc.parceiroSugerido}}
+            </td>
+            <td style="border:1px #cccccc solid; padding:5px;" colspan="2">
+              {{Poc.parceiroJustificativa}}
+            </td>
+          </tr>
+          <tr style="background-color:#dddddd">
+            <td style="border:1px #cccccc solid; padding:5px; font-size:18px; color:#509766" colspan="2">
+              Período da POC - DE
+            </td>
+            <td style="border:1px #cccccc solid; padding:5px; font-size:18px; color:#509766" colspan="2">
+              Período da POC - ATÉ
+            </td>
+          </tr>
+          <tr>
+            <td style="border:1px #cccccc solid; padding:5px;" colspan="2">
+              {{Poc.periodoInicial}}
+            </td>
+            <td style="border:1px #cccccc solid; padding:5px;" colspan="2">
+              {{Poc.periodoFinal}}
+            </td>
+          </tr>
+          <tr style="background-color:#dddddd">
+            <td style="border:1px #cccccc solid; padding:5px; font-size:18px; color:#509766" colspan="2">
+              Custo Cliente
+            </td>
+            <td style="border:1px #cccccc solid; padding:5px; font-size:18px; color:#509766" colspan="2">
+              Custo Oi
+            </td>
+          </tr>
+          <tr>
+            <td style="border:1px #cccccc solid; padding:5px;" colspan="2">
+              {{Poc.custoCliente}}
+            </td>
+            <td style="border:1px #cccccc solid; padding:5px;" colspan="2">
+              {{Poc.custoOi}}
+            </td>
+          </tr>
+          <tr style="background-color:#dddddd">
+            <td style="border:1px #cccccc solid; padding:5px; font-size:18px; color:#509766" colspan="4">
+              Resultado Esperado
+            </td>
+          </tr>
+          <tr>
+            <td style="border:1px #cccccc solid; padding:5px;" colspan="4">
+              {{Poc.resultadoEsperado}}
+            </td>
+          </tr>
+          <tr style="background-color:#dddddd">
+            <td style="border:1px #cccccc solid; padding:5px; font-size:18px; color:#509766" colspan="4">
+              Detalhe pós negociação (Caso POC já fechada com cliente) 
+            </td>
+          </tr>
+          <tr>
+            <td style="border:1px #cccccc solid; padding:5px;" colspan="4">
+              {{Poc.detalhePosNegociacao}}
+            </td>
+          </tr>
+          <tr style="background-color:#dddddd">
+            <td style="border:1px #cccccc solid; padding:5px; font-size:18px; color:#509766" colspan="4">
+              Pontencial receita mensal
+            </td>
+          </tr>
+          <tr>
+            <td style="border:1px #cccccc solid; padding:5px;" colspan="4">
+              {{Poc.potencialReceitaMensal}}
+            </td>
+          </tr>
+          <tr style="background-color:#dddddd">
+            <td style="border:1px #cccccc solid; padding:5px; font-size:18px; color:#509766" colspan="4">
+              Observação
+            </td>
+          </tr>
+          <tr>
+            <td style="border:1px #cccccc solid; padding:5px;" colspan="4">
+              {{Poc.observacao}}
+            </td>
+          </tr>
+          {{#if fluxoDeAprovacao}}
+          <tr style="background-color:#dddddd">
+            <td style="border:1px #cccccc solid; padding:5px; font-size:18px; color:#509766" colspan="4">
+              Aprovações realizadas
+            </td>
+          </tr>
+          <tr>
+            <td style="border:1px #cccccc solid; padding:5px;" colspan="4">
+              {{#each fluxoDeAprovacao}}
+                {{this.Usuario.perfil.nome}} - {{this.Usuario.nome}} - {{this.status}} - {{this.aprovadoEm}}<br>
+              {{/each}}
+            </td>
+          </tr>
+          {{/if}}
+        </table>
+      </td>
+    </tr>
+  </table>
+
+  <p class="MsoNormal" align="center" style="text-align:center"><br>
+    <br>
+    <a href="https://www.google.com/chrome/" target="_blank"><span style="text-decoration:none"><img border="0"
+          id="m_-4357532493846534739_x0000_i1028" src="https://portalb2b.oi.net.br/theme/img/chrome.png"></span></a><a
+      href="https://www.mozilla.org/pt-BR/firefox/new/" target="_blank"><span style="text-decoration:none"><img
+          border="0" id="m_-4357532493846534739_x0000_i1029"
+          src="https://portalb2b.oi.net.br/theme/img/firefox.png"></span>
+  </p>
+</center>
